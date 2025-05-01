@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 my_key = os.getenv("OPENAI_API_KEY")
-llm = ChatOpenAI(model="gpt-4o-mini", openai_api_key=my_key, temperature=0.3, max_tokens=2000)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.3, max_tokens=2000)
 
 role_template = "คุณคือ {role} โปรดตอบคำถามต่อไปนี้ตามบทบาทของคุณ:\n\n{question}"
 prompt = PromptTemplate(

@@ -1,11 +1,13 @@
 from langchain_openai import ChatOpenAI
 
-# สร้างโมเดล
+
 llm = ChatOpenAI(
 model="gpt-4o-mini",
-api_key="sk-"
+api_key="sk-",
+temperature= 0.8,
+max_tokens=2000,
 )
-#เรียกใช้งาน Model
-response = llm.invoke("นายกรัฐมนตรีคนล่าสุดของประเทศไทยชื่อว่าอะไร")
+
+response = llm.invoke("ให้ไอเดียทำแคมเปญโฆษณาน้ำปลาแบบแหวกแนว")
 
 print(response.content)
